@@ -1,0 +1,42 @@
+{
+  "name": "balance",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./src/bin/www"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.17.1",
+    "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.1.0",
+    "npm-git-install": "^0.3.0",
+    "sequelize": "^5.21.4"
+  },
+  "description": "Balance",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisernia/PresupuestoPersonal.git"
+  },
+  "keywords": [
+    "Bunge2021_06"
+  ],
+  "author": "lucila isernia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisernia/PresupuestoPersonal/issues"
+  },
+  "homepage": "https://github.com/lisernia/PresupuestoPersonal#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

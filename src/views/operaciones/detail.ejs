@@ -1,0 +1,46 @@
+<%- include('../partials/head') %>
+
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Detalle de: <%= operacion.concepto %>
+			</h1>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<p>Precio: <%= operacion.tipo %>
+			</p>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<p>Monto: <%= operacion.monto %>
+			</p>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<p>Fecha: <%= operacion.fecha %>
+			</p>
+
+		</div>
+	</div>
+
+	<form action="/operaciones/<%= operacion.idoperacion %>?_m=DELETE" method="POST">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h6>¿Querés eliminar esta operacion?</h6>
+				<button type="submit">Borrar operacion</button>
+			</div>
+		</div>
+	</form>
+
+	<%- include('../partials/footer') %>

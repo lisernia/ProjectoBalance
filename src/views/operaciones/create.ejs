@@ -1,0 +1,43 @@
+<%- include('../partials/head') %>
+	<h1>Crear un producto</h1>
+	<form action="/operaciones/create" method="POST">
+		<div class="row">
+			<div class="col-md-12">
+				<label>Concepto:</label>
+				<input type="text" name="concepto">
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<label>Monto:</label>
+					<input type="text" name="monto">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<label>Tipo:</label>
+					<select name="tipo">
+						<option value="">Elegí el tipo de operacion</option>
+						<option value="E">Egreso</option>
+						<option value="I">Ingreso</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<label>Categorias:</label>
+					<select name="categorias">
+						<option value="">Elegí una categoria</option>
+						<% categorias.forEach(oneCategory=> { %>
+							<option value="<%= oneCategory.idcategoria %>">
+								<%= oneCategory.nombre %>
+							</option>
+							<% }) %>
+					</select>
+				</div>
+			</div>
+			<button type="submit">Guardar</button>
+	</form>
+	<%- include('../partials/footer') %>

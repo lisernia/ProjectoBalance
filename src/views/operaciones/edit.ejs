@@ -1,0 +1,33 @@
+<%- include('../partials/head')  %>
+	<h1>Crear una operacion</h1>
+	<form action="/operaciones/update/<%=operacion.idoperacion%>?_method=PUT" method="POST" >
+	 
+
+		<div class="row">
+			<div class="col-md-12">
+				 
+				<label>Concepto:</label><br>
+				<input type="text" name="concepto" value="<%= operacion.concepto  %>"> 
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+		     <label>Monto:</label><br>
+			 <input type="text" name="monto" value="<%= operacion.monto  %>">
+			</div>
+		</div>
+
+	 
+		<div class="row">
+			<div class="col-md-12">
+				<label>Tipo:</label><br>
+				<input type="text" name="tipo" value="<%= operacion.tipo  %>">
+			</div>
+		</div>
+
+		  
+ 
+		<button type="submit">actualizar</button>
+	</form>
+<%- include('../partials/footer')  %>

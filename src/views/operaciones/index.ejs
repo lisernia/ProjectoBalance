@@ -1,0 +1,38 @@
+<%- include('../partials/head')  %> 
+
+<div class="row">
+	<div class="col-md-12">
+		<h1>Listado de Operaciones</h1>
+	
+ 
+	</div>
+  </div>
+  
+  <div class="row">
+	<div class="col-md-12">
+	 
+  <% if (operaciones.length === 0) { %>
+	<h5>No hay operaciones para mostrar</h5>
+
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+	<% } else { %>
+		<ul>
+			<% operaciones.forEach(oneOperacion => { %>
+			<li>
+				<b>Nombre:</b> <%= oneOperacion.concepto %> <br>  
+				<b>Monto:</b> $<%= oneOperacion.getRoundPrice() %> <br>
+				<a href="/operaciones/<%= oneOperacion.idoperacion %>">Eliminar operacion</a>
+				<a href="/operaciones/update/<%= oneOperacion.idoperacion %>">Modificar operacion</a>
+				<hr>
+			</li>
+			<% }) %>
+		</ul>
+
+	</div>
+</div>
+	<% } %>
+<%- include('../partials/footer')  %>
